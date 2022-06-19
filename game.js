@@ -39,6 +39,20 @@ $(document).keypress(function () {
   }, 100);
 });
 
+$(document).click(function () {
+  level = 0;
+  currentLevel = 0;
+  correct = true;
+  gamePattern.length = 0;
+  userClickedPattern.length = 0;
+  setTimeout(function () {
+    if (gameStarted === false) {
+      nextSequence();
+      gameStarted = true;
+    }
+  }, 100);
+});
+
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     if (gamePattern.length === userClickedPattern.length) {
