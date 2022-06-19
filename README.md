@@ -1,1 +1,1 @@
-# ujjwalnv.github.io/simon-game
+# https://ujjwalnv.github.io/simon-game
