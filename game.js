@@ -26,13 +26,13 @@ $(".btn").click(function () {
 });
 
 $(document).keypress(function () {
-  level = 0;
-  currentLevel = 0;
-  correct = true;
-  gamePattern.length = 0;
-  userClickedPattern.length = 0;
   setTimeout(function () {
     if (gameStarted === false) {
+      level = 0;
+      currentLevel = 0;
+      correct = true;
+      gamePattern.length = 0;
+      userClickedPattern.length = 0;
       nextSequence();
       gameStarted = true;
     }
@@ -40,13 +40,13 @@ $(document).keypress(function () {
 });
 
 $(document).click(function () {
-  level = 0;
-  currentLevel = 0;
-  correct = true;
-  gamePattern.length = 0;
-  userClickedPattern.length = 0;
   setTimeout(function () {
     if (gameStarted === false) {
+      level = 0;
+      currentLevel = 0;
+      correct = true;
+      gamePattern.length = 0;
+      userClickedPattern.length = 0;
       nextSequence();
       gameStarted = true;
     }
