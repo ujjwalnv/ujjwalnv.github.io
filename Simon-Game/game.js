@@ -16,7 +16,7 @@ $(".btn").click(function () {
     checkAnswer(currentLevel++);
   } else {
     console.log("wrong");
-    var audio = new Audio("./sounds/wrong.mp3");
+    var audio = new Audio("./Simon-Game/sounds/wrong.mp3");
     audio.play();
     $("body").addClass("game-over");
     setTimeout(function () {
@@ -39,7 +39,7 @@ $(document).keypress(function () {
   }, 100);
 });
 
-$(document).click(function () {
+$("#level-title").click(function () {
   setTimeout(function () {
     if (gameStarted === false) {
       level = 0;
@@ -60,13 +60,13 @@ function checkAnswer(currentLevel) {
       setTimeout(nextSequence, 1000);
     }
   } else {
-    var audio = new Audio("./sounds/wrong.mp3");
+    var audio = new Audio("./Simon-Game/sounds/wrong.mp3");
     audio.play();
     $("body").addClass("game-over");
     setTimeout(function () {
       $("body").removeClass("game-over");
     }, 200);
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press Any Key or Click here to Restart");
     gameStarted = false;
     correct = false;
   }
@@ -88,7 +88,7 @@ function nextSequence() {
 }
 
 function playSound(color) {
-  var audio = new Audio("./sounds/" + color + ".mp3");
+  var audio = new Audio("./Simon-Game/sounds/" + color + ".mp3");
   audio.play();
 }
 
